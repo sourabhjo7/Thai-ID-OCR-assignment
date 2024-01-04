@@ -1,0 +1,13 @@
+.FlashMessage {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .FlashMessage.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+  }
+  
+  /* Additional styles for other message types (e.g., success, info, etc.) can be added here */
+  

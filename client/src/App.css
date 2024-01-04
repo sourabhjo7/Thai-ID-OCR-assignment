@@ -1,42 +1,139 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* App.css */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Page container */
+  .App {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  /* Heading styles */
+  .AppHeading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
   }
+  
+  /* Sections layout */
+  .Sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Upload and History sections */
+  .UploadSection,
+  .HistorySection {
+    width: 48%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  /* Upload Section */
+  .UploadSection h2 {
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  /* History Section */
+  .HistorySection h2 {
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  /* Filter buttons */
+  .FilterSection {
+    margin-bottom: 20px;
+  }
+  
+  .FilterSection button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #2196f3; /* Blue button */
+    color: #fff;
+    font-size: 14px;
+  }
+  
+ /* Records table */
+.RecordsTable {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .RecordsTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+  }
+  
+  .RecordsTable th,
+  .RecordsTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+  }
+  
+  .RecordsTable th {
+    background-color: #f0f0f0; /* Table header background color */
+  }
+  
+  /* JSON Output section */
+  .JSONOutput {
+    margin-top: 20px;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+  }
+  
+  /* Modal Styles */
+.edit-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
