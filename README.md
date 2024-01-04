@@ -25,36 +25,35 @@
 
 ## Architecture and Folder Structure 
 ![MVC Pattern Visual](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/BG.png)
-client/
-|-- React+Vite Format
-|--src|
-|  |--ApiCalls
-|       --index.js # API calls for requesting backend API 
-|
-backend/
-|-- services/
-|   |-- ExtractionOpenSpec.js     # OpenAI Logic for extraction of ocr processed text by google vission Api 
-|   
-|
-|-- controllers/ # Controller for Thai ID Card operations
-|   |-- AllOcrRecords.js 
-|   |-- CreatePcrRecords.js
-|   |-- EditOcrRecords.js
-|   |-- SoftDelete.js
-|-- models/
-|   |-- index.js   # Mongoose model for Thai ID Card
-|
-|-- routes/
-|   |-- index.js   # Routes for Thai ID Card operations
-|   
-|-- .env       # Environment variables (make sure to add this to .gitignore)
-|-- .gitignore # Git ignore file
-|
-|-- server.js  # Middlewares and configuration for the API  
-|
-|-- index.js     # Main entry point for the Express app
-|-- package.json
-|-- README.md
+### Client (React+Vite Format)
+
+- **src/**
+  - **ApiCalls/**
+    - `index.js` # API calls for requesting backend API
+
+### Backend
+
+- **services/**
+  - `ExtractionOpenSpec.js` # OpenAI Logic for extracting OCR processed text by Google Vision API
+
+- **controllers/**
+  - `AllOcrRecords.js` 
+  - `CreatePcrRecords.js`
+  - `EditOcrRecords.js`
+  - `SoftDelete.js`
+
+- **models/**
+  - `index.js` # Mongoose model for Thai ID Card
+
+- **routes/**
+  - `index.js` # Routes for Thai ID Card operations
+
+- `.env` # Environment variables (ensure this is added to .gitignore)
+- `.gitignore` # Git ignore file
+- `server.js` # Middlewares and configuration for the API  
+- `index.js` # Main entry point for the Express app
+- `package.json`
+- `README.md`
 
 ## API ENDPOINTS
 - GET /api/thaiIDCards: Get all OCR records.
