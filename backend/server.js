@@ -16,7 +16,7 @@ app.use(express.json());
 
 //middleware using cors with options
 app.use(cors({
-    origin: ['http://localhost:3001',"http://localhost:5000","http://localhost:5173"], //change origin based on domain main of the application
+    origin: "https://thai-id-ocr-client.netlify.app", //change origin based on domain main of the application
     optionsSuccessStatus: 200,
     // credentials: true 
   }

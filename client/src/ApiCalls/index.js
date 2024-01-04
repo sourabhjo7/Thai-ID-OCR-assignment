@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an instance of Axios with custom configuration
 const instance = axios.create({
-  baseURL: 'http://localhost:3000/api/thaiIDCards', // Set the base URL for all requests
+  baseURL: 'https://thai-id-ocr-assignment-production.up.railway.app/api/thaiIDCards', // Set the base URL for all requests
   // timeout: 5000, // Set a timeout for requests (in milliseconds)
   headers: {
     'Content-Type': 'application/json',
