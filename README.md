@@ -25,6 +25,12 @@
 
 ## Architecture and Folder Structure 
 ![MVC Pattern Visual](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/BG.png)
+client/
+|-- React+Vite Format
+|--src|
+|  |--ApiCalls
+|       --index.js # API calls for requesting backend API 
+|
 backend/
 |-- services/
 |   |-- ExtractionOpenSpec.js     # OpenAI Logic for extraction of ocr processed text by google vission Api 
