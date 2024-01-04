@@ -1,7 +1,7 @@
 ## Thai-ID-OCR-assignment
 
 - deployed application Link:- https://thai-id-ocr-client.netlify.app/
-- API-link :- https://thai-id-ocr-assignment-production.up.railway.app/test
+- deployed Backend-API Link :- https://thai-id-ocr-assignment-production.up.railway.app/
 
 - Welcome to Thai-Id-OCR App  which is a full-stack web application built with the MERN (MongoDB, Express, React, Node.js) stack. It provides a platform for uploading Thai Id Cards which is  then processed by the application to extract relevant Data by using  OCR Processing using google Vission API and generative AI (openAI).
 -providing users with a dashboard of creating editing filtering and soft deleting records of Processed data from the ID card stored in Database 
