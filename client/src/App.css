@@ -10,7 +10,6 @@ body {
   /* Page container */
   .App {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -20,41 +19,46 @@ body {
   
   /* Heading styles */
   .AppHeading {
+    width: 100%;
     text-align: center;
     color: #333;
     margin-bottom: 30px;
   }
-  
   /* Sections layout */
-  .Sections {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  /* Upload and History sections */
-  .UploadSection,
-  .HistorySection {
-    width: 48%;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fff; /* White background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  }
-  
-  /* Upload Section */
-  .UploadSection h2 {
-    margin-bottom: 15px;
-    color: #444;
-  }
-  
-  /* History Section */
-  .HistorySection h2 {
-    margin-bottom: 15px;
-    color: #444;
-  }
-  
+.Sections {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Upload and JSONOutput */
+.UploadSection {
+  width: 48%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.JSONOutput {
+  width: 48%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History Section */
+.HistorySection {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
   /* Filter buttons */
   .FilterSection {
     margin-bottom: 20px;
@@ -70,7 +74,7 @@ body {
     color: #fff;
     font-size: 14px;
   }
-  
+   
  /* Records table */
 .RecordsTable {
     overflow-x: auto;

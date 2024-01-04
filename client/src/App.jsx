@@ -131,7 +131,13 @@ function App() {
       <div className="Sections">
         <div className="UploadSection">
           <h2>Upload New File</h2>
-          <Fileupload setocrtext={setocrtext}/>
+          <Fileupload setocrtext={setocrtext} />
+          <div className="JSONOutput">
+            <h2>JSON Output of Latest Upload or Viewed Entry</h2>
+            <div className="RecordsJSON">
+              <JSONDisplay jsonData={isLoading ? 'Loading....' : jsonData} />
+            </div>
+          </div>
         </div>
         <div className="HistorySection">
           <h2>OCR History</h2>
@@ -141,7 +147,7 @@ function App() {
             <button onClick={() => filterRecords('failed')}>Failed</button>
           </div>
           <div className="RecordsTable">
-        {listloading ? (
+            {listloading ? (
           <p>Loading...</p>
         ) : (
           <table>
@@ -183,71 +189,71 @@ function App() {
             </tbody>
           </table>
         )}
-      </div>
-       {/* Edit Modal */}
+            </div>
+            </div>
+          </div>
+                 {/* Edit Modal */}
        <Modal
-  isOpen={isEditModalOpen}
-  onRequestClose={closeEditModal}
-  className="edit-modal"
-  overlayClassName="overlay"
->
-  <h2>Edit Record</h2>
-  <form  onSubmit={handleEditSubmit} >
-    <label htmlFor="firstName">First Name</label>
-    <input
-      type="text"
-      id="firstName"
-      value={editRecord.firstName}
-      onChange={(e) => setEditRecord({ ...editRecord, firstName: e.target.value })}
-    />
-    {/* Add similar input fields for other attributes */}
-    <label htmlFor="lastName">Last Name</label>
-    <input
-      type="text"
-      id="lastName"
-      value={editRecord.lastName}
-      onChange={(e) => setEditRecord({ ...editRecord, lastName: e.target.value })}
-    />
-    <label htmlFor="dateOfIssue">Date of Issue</label>
-    <input
-      type="text"
-      id="dateOfIssue"
-      value={editRecord.dateOfIssue}
-      onChange={(e) => setEditRecord({ ...editRecord, dateOfIssue: e.target.value })}
-    />
-    <label htmlFor="dateOfBirth">Date of Birth</label>
-    <input
-      type="text"
-      id="dateOfBirth"
-      value={editRecord.dateOfIssue}
-      onChange={(e) => setEditRecord({ ...editRecord, dateOfBirth: e.target.value })}
-    />
-    {/* Add other fields from your backend schema */}
-    {/* Disable ID Number field */}
-    <label htmlFor="identificationNumber">ID Number</label>
-    <input
-      type="text"
-      id="identificationNumber"
-      value={editRecord.identificationNumber}
-      disabled
-    />
-    {/* Save changes button */}
-    <button type="submit">Save Changes</button>
-    <button onClick={closeEditModal}>Cancel</button>
-  </form>
-</Modal>
+       isOpen={isEditModalOpen}
+       onRequestClose={closeEditModal}
+       className="edit-modal"
+       overlayClassName="overlay"
+     >
+       <h2>Edit Record</h2>
+       <form  onSubmit={handleEditSubmit} >
+         <label htmlFor="firstName">First Name</label>
+         <input
+           type="text"
+           id="firstName"
+           value={editRecord.firstName}
+           onChange={(e) => setEditRecord({ ...editRecord, firstName: e.target.value })}
+         />
+         {/* Add similar input fields for other attributes */}
+         <label htmlFor="lastName">Last Name</label>
+         <input
+           type="text"
+           id="lastName"
+           value={editRecord.lastName}
+           onChange={(e) => setEditRecord({ ...editRecord, lastName: e.target.value })}
+         />
+         <label htmlFor="dateOfIssue">Date of Issue</label>
+         <input
+           type="text"
+           id="dateOfIssue"
+           value={editRecord.dateOfIssue}
+           onChange={(e) => setEditRecord({ ...editRecord, dateOfIssue: e.target.value })}
+         />
+         <label htmlFor="dateOfBirth">Date of Birth</label>
+         <input
+           type="text"
+           id="dateOfBirth"
+           value={editRecord.dateOfIssue}
+           onChange={(e) => setEditRecord({ ...editRecord, dateOfBirth: e.target.value })}
+         />
+         {/* Add other fields from your backend schema */}
+         {/* Disable ID Number field */}
+         <label htmlFor="identificationNumber">ID Number</label>
+         <input
+           type="text"
+           id="identificationNumber"
+           value={editRecord.identificationNumber}
+           disabled
+         />
+         {/* Save changes button */}
+         <button type="submit">Save Changes</button>
+         <button onClick={closeEditModal}>Cancel</button>
+       </form>
+     </Modal>
         </div>
-      </div>
-      <div className="JSONOutput">
-        <h2>JSON Output of Latest Upload or Viewed Entry</h2>
-        <div className="RecordsJSON">
-          <JSONDisplay
-            jsonData={isLoading ? 'Loading....' :jsonData}
-          />
-        </div>
-      </div>
-    </div>
   );
 }
 
 export default App;
+
+
+/*
+
+/*
+
+        
+        */
